@@ -46,14 +46,14 @@
     },
 
     tokenFormatter: function(item) {
-      var string = item[this.propertyToSearch].trim();      
+      var string = item[this.propertyToSearch];
       var res;
       if (item['u']) {
-         res="<li><p title=\""+item['u']+"\" class=\""+item['o']+" ";
+         res="<li><p title=\""+item['u']+"\" class=\""+item['o']+", ";
       } else {
          res="<li><p class=\"";
       }
-      return res + item['s']+"\">"+(this.enableHTML ? string : _escapeHTML(string)) + "&nbsp;</p></li>";
+      return res + item['s']+"\">"+(this.enableHTML ? string : _escapeHTML(string)) + "</p></li>";
     },
 
     // Tokenization settings
@@ -540,7 +540,7 @@
          if (saved_tokens.length==0) {
             return "s0";
          }
-         return saved_tokens[saved_tokens.length-1]['s'];
+         return "s"+saved_tokens.length;
       }
 
       this.toggleDisabled = function(disable) {
