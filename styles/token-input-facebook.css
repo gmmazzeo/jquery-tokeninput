@@ -11,7 +11,7 @@ ul.token-input-list-facebook {
     min-height: 1px;
     z-index: 999;
     margin: 0;
-    padding: 0;
+    padding: 3px;
     background-color: #fff;
     list-style-type: none;
     clear: left;
@@ -30,7 +30,7 @@ li.token-input-token-facebook {
     overflow: hidden;
     height: auto !important;
     height: 15px;
-    /*margin: 3px;*/
+    margin: 1px;
     /*padding: 1px 3px;*/
     background-color: #eff2f7;
     color: #000;
